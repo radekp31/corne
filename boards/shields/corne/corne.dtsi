@@ -11,6 +11,7 @@
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
         zmk,matrix-transform = &default_transform;
+        zmk,backlight = &backlight;
     };
 
     // Define the backlight LED, but don't choose it yet

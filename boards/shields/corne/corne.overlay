@@ -14,10 +14,3 @@
     };
 };
 
-/ {
-    chosen {
-        zmk,backlight = &backlight;
-    };
-};
-
-
