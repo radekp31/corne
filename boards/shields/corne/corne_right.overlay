@@ -10,6 +10,15 @@
     chosen {
         zmk,backlight = &backlight;
     };
+
+    backlight: backlight_ctrl {
+        compatible = "gpio-leds";
+        label = "Backlight LED";
+        led_pin: led_pin {
+            gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+            label = "Backlight LED";
+        };
+    };
 };
 
 &default_transform {
