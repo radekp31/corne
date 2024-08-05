@@ -11,7 +11,7 @@
         zmk,backlight = &backlight;
     };
 
-    backlight: backlight_ctrl {
+    backlight: backlight {
         compatible = "gpio-leds";
         label = "Backlight LED";
         led_pin: led_pin {

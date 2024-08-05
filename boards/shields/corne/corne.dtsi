@@ -21,10 +21,20 @@
 //        };
 //    };
 
+//    backlight: backlight {
+//      compatible = "gpio-backlight";
+//     gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
+//      status = "okay";
+//    };
+
+
     backlight: backlight {
-      compatible = "gpio-backlight";
-      gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
-      status = "okay";
+        compatible = "gpio-leds";
+        label = "Backlight LED";
+        led_pin: led_pin {
+        gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+        label = "Backlight LED";
+        };
     };
 
 
