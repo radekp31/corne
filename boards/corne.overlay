@@ -5,6 +5,17 @@
         zmk,underglow = &led_strip;
         zmk,backlight = &backlight;
     };
+
+    &gpio0 {
+    status = "okay";
+};
+
+backlight: backlight {
+    compatible = "gpio-backlight";
+    gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
+    status = "okay";
+  };
+
 };
 
 
