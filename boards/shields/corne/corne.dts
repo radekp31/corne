@@ -5,7 +5,6 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <corne-pinctrl.dtsi>
 / {
     chosen {
         zephyr,display = &oled;
@@ -14,15 +13,6 @@
         zmk,backlight = &backlight;
     };
 
-    // Define the backlight LED, but don't choose it yet
-    backlight: backlight_ctrl {
-        compatible = "gpio-leds";
-        label = "Backlight LED";
-        led_pin: led_pin {
-            gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
-            label = "Backlight LED";
-        };
-    };
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
