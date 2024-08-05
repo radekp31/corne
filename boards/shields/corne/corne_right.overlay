@@ -1,41 +1,22 @@
-/*
- * Copyright (c) 2020 Pete Johanson
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include "corne.dtsi"
-
-/ {
-    chosen {
-        zmk,backlight = &backlight;
-    };
-
-    backlight: backlight {
-        compatible = "gpio-leds";
-        label = "Backlight LED";
-        led_pin: led_pin {
-            gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
-            label = "Backlight LED";
-        };
-    };
-};
 
 &default_transform {
     col-offset = <6>;
 };
 
-&five_column_transform {
-    col-offset = <6>;
-};
-
 &kscan0 {
     col-gpios
-        = <&pro_micro 14 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 15 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 19 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 20 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 21 GPIO_ACTIVE_HIGH>
+        = <&gpio1 0 GPIO_ACTIVE_HIGH>
+        , <&gpio0 10 GPIO_ACTIVE_HIGH>
+        , <&gpio0 9 GPIO_ACTIVE_HIGH>
+        , <&gpio0 24 GPIO_ACTIVE_HIGH>
+        , <&gpio0 13 GPIO_ACTIVE_HIGH>
+        , <&gpio0 20 GPIO_ACTIVE_HIGH>
         ;
+};
+
+/ {
+    chosen {
+        zmk,backlight = &backlight;
+    };
 };
