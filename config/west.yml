@@ -11,4 +11,5 @@ manifest:
       import: app/west.yml
   self:
     #path: config
-    path: .
+    #path: .
+    path: boards/shields/corne
