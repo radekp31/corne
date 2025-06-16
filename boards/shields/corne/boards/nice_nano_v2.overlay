@@ -1,4 +1,4 @@
-/ {
+/* {
     backlight: pwmleds {
         compatible = "pwm-leds";
         pwm_led_0 {
@@ -10,7 +10,9 @@
         zmk,backlight = &backlight;
     };
 };
+*/
 
+/*
 &pinctrl {
     // Other pinctrl definitions for other hardware
     pwm0_default: pwm0_default {
@@ -32,3 +34,4 @@
     pinctrl-1 = <&pwm0_sleep>;
     pinctrl-names = "default", "sleep";
 };
+*/
